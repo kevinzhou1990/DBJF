@@ -1,0 +1,2 @@
+/*! spakey1.0 updated in 2016-12-26 */
+define([],function(){return{baseUrl:"/js",paths:{jquery:"plugin/jquery",mock:"plugin/mock",sha1:"plugin/sha1",template7:"plugin/template7",tool:"module/tool",zh_tips:"module/zh_tips"},shim:{jquery:{exports:"$"},sha1:["jquery"],template7:{}}}});

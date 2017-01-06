@@ -1,0 +1,118 @@
+/**变量，包括颜色和字体**/
+/**字体大小**/
+.getPwd .mainbody {
+  background: url(../img/pic/mainbody_bg.png) no-repeat 0 0 transparent;
+  background-size: 100% 100%;
+}
+.getPwd .mainbody .optsbar {
+  font-size: 16px;
+  padding: 35px 0 6px 0;
+}
+.getPwd .mainbody .optsbar a {
+  font-size: 14px;
+}
+.getPwd .mainbody .getPwd_content {
+  background: #fff;
+  height: 435px;
+}
+.getPwd #register {
+  margin-top: 50px;
+}
+.getPwd .getPwd_content {
+  border: 1px solid #f1f1f1;
+}
+.getPwd .statusSet,
+.getPwd .inputContent {
+  width: 445px;
+  margin: 0 auto;
+}
+.getPwd .statusSet {
+  position: relative;
+  padding: 30px 0 65px 0;
+  color: #666666;
+  margin-bottom: 60px;
+}
+.getPwd .statusSet > div.box {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+.getPwd .statusSet > div.box > div:first-child,
+.getPwd .statusSet > div.box > div:last-child {
+  width: 85px;
+}
+.getPwd .statusSet .icon {
+  width: 52px;
+  height: 52px;
+}
+.getPwd .statusSet .active {
+  color: #ff5951;
+}
+.getPwd .statusSet .line {
+  border-bottom: 1px solid #cccccc;
+  position: absolute;
+  bottom: 38px;
+  left: 16px;
+  right: 16px;
+}
+.getPwd .inputContent table {
+  width: 100%;
+}
+.getPwd .inputContent table td:last-child {
+  position: relative;
+}
+.getPwd .inputContent table td > .icon {
+  width: 14px;
+  height: 23px;
+  position: absolute;
+  right: 60px;
+  top: 23px;
+}
+.getPwd .inputContent table td > .icon-register-lock {
+  width: 18px;
+}
+.getPwd .inputContent table p > .icon {
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-right: 12px;
+}
+.getPwd .inputContent input[type='text'],
+.getPwd .inputContent input[type='password'] {
+  height: 44px;
+  border: 1px solid #ddd;
+  text-indent: 12px;
+}
+.getPwd .inputContent input,
+.getPwd .inputContent p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 15px;
+}
+.getPwd .inputContent p {
+  margin-top: 0;
+}
+.getPwd .inputContent .button {
+  display: inline-block;
+  width: 109px;
+  height: 46px;
+  margin: 10px 0 10px 8px;
+  vertical-align: middle;
+  line-height: 46px;
+}
+.getPwd .inputContent #phoneNumber,
+.getPwd .inputContent #pwd {
+  width: 292px;
+}
+.getPwd .inputContent #identifyCode {
+  width: 174px;
+}
+.getPwd .inputContent .nextStep {
+  border: none;
+  width: 292px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 18px;
+  border-radius: 5px;
+}

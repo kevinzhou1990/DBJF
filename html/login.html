@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/my-app.css" />
+  <title>大白金服-登录</title>
+</head>
+<body id="identify" identify="login" class="loginPage">
+  <div class="header">
+    <!--<div class="opts">-->
+      <!--<div class="mainWidth clearBoth">-->
+        <!--<div class="fleft">-->
+          <!--<i class="icon icon-phone"></i>全国服务热线：400-666-8888-->
+        <!--</div>-->
+        <!--<div class="right">-->
+          <!--<a href="#">登录</a><a href="#">注册</a><a href="#">会员中心<i class="msg-tips"></i></a><a href="#">手机客户端</a><a href="#"><i class="icon icon-wx"></i></a>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
+    <div class="mainWidth header-search box">
+      <div class="logo">
+        <img src="../img/pic/logo.png" alt="logo" />
+      </div>
+      <div class="menu">
+        <a href="#">发现</a><a href="#">圈子</a><a href="#"><i class="icon icon-more" title="更多"></i></a>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="请输入您感兴趣的内容"/>
+        <i class="icon icon-search"></i>
+      </div>
+      <div class="opts flex1"><a href="" class="button button-tifOff">我要爆料</a><a href="" class="button button-login">立即登录</a></div>
+    </div>
+  </div>
+  <div class="mainbody clearBoth">
+    <div class="mainWidth">
+      <div class="adContent fleft box box-middle">
+        <p>稳健理财&nbsp;&nbsp;&nbsp;&nbsp;安全投资<br /><span>xxxxxxxxxxxxxxxxxxxxxxxxx</span></p>
+      </div>
+      <div id="error-tips" class="account"><span>账号被冻结</span><i class="icon icon_arrorRigth"></i></div>
+      <div class="loginFrame fright" id="loginFrame">
+        <p>
+          没有账号？<a href="#">注册</a>
+        </p>
+        <ul>
+          <li class="title box">
+            <div class="flex1"><span class="active" data-loginType="convention">常规登录</span></div>
+            <div class="flex1"><span data-loginType="fastLogin">快捷登录</span></div>
+          </li>
+          <li>
+            <div class="convention loginShow">
+              <div class="inputs"><i class="icon icon-user"></i><input type="text" data-type="account" data-err-tips="账号不能为空" placeholder="手机号/邮箱"></div>
+              <div class="inputs"><i class="icon icon-lock"></i><input type="password" data-type="password" data-err-tips="请输入密码" placeholder="密码"></div>
+              <div class="box">
+                <div class="flex1"><label for="holdLogin" class="icon_checkbox icon_uncheck"></label><input type="checkbox" id="holdLogin"><label>七天内免登录</label></div>
+                <div class="flex1 align-right"><a href="#">忘记密码</a></div>
+              </div>
+            </div>
+            <div class="fastLogin">
+              <div class="inputs"><i class="icon icon-user"></i><input type="text" data-type="account" maxlength="11" data-err-tips="请输入正确的手机号码" placeholder="手机号"></div>
+              <div class="inputs"><div class="box"><div class="flex1"><i class="icon icon-lock"></i><input data-type="code" data-err-tips="请输入验证码" type="text" placeholder="验证码"></div><button id="sendVcode" class="usable">点击发送</button></div></div>
+              <div class="box">
+                <div class="flex1"><label for="holdLogins" class="icon_checkbox icon_uncheck"></label><input type="checkbox" id="holdLogins"><label>七天内免登录</label></div>
+                <div class="flex1 align-right"><a href="#">忘记密码</a></div>
+              </div>
+            </div>
+          <li>
+            <a href="#" class="button button-login align-center">立即登录</a>
+          </li>
+          </li>
+          <li class="login-outside">
+            <span>联合登录：</span><a href="#" target="_blank">腾讯QQ</a><a class="border" href="#" target="_blank">微信</a><a href="#" target="_blank">新浪微博</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer box">
+    <div class="mainWidth box-middle">
+      <p>版权所有 本站内容未经书面许可，禁止一切形式的转载。</p>
+      <p>&copy;copyright 2010-2016 XXXXXXXXX. All rights reserved. 京XXX备123456789号</p>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="../js/init.js"></script>
+</html>

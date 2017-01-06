@@ -1,0 +1,2 @@
+/*! spakey1.0 updated in 2016-12-26 */
+require(["config"],function(config){require.config(config),require(["jquery","zh_tips","tool","template7"],function($,LanguageZh,tool,T7){tool.interceptAjax();var indexPage={init:function(){this.getIndexInfo(),this.getIndexArticleList()},getIndexInfo:function(){$.ajax({url:"/index/info",type:"post",data:{token:localStorage._mtoken?localStorage._mtoken:""},dataType:"json",success:function(data){console.log(JSON.stringify(data))}})},getIndexArticleList:function(){}};indexPage.init()})});

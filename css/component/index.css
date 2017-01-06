@@ -1,0 +1,209 @@
+/**
+* 首页样式表
+*/
+/**变量，包括颜色和字体**/
+/**字体大小**/
+.mainbody .advertisement ul img {
+  width: 100%;
+}
+.mainbody .advertisement #slider {
+  max-height: 560px;
+}
+.mainbody .advertisement .imgAd {
+  padding: 70px 0;
+  background: #f5f5f5;
+}
+.mainbody .advertisement .imgAd a.center {
+  margin: 0 36px;
+}
+.mainbody .advertisement .imgAd img {
+  border: 1px solid #e1e1e1;
+}
+.mainbody .articleList li {
+  padding: 30px 0;
+  border-bottom: 1px dashed #cccccc;
+}
+.mainbody .articleList li:first-child {
+  padding-top: 0;
+}
+.mainbody .articleList .article > a {
+  display: block;
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  padding-left: 3px;
+  position: relative;
+}
+.mainbody .articleList .article > a span {
+  position: absolute;
+  display: block;
+  width: 67px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  background: url("../img/icon/icon_start.png") 0 0 transparent;
+  top: 30px;
+  left: -2px;
+  color: #ffffff;
+  text-indent: 5px;
+  box-shadow: -3px 3px 2px #666666;
+}
+.mainbody .articleList .article > a span.onTime {
+  background: url("../img/icon/icon_prosessing.png") 0 0 transparent;
+}
+.mainbody .articleList .article > .flex1 {
+  margin-left: 12px;
+  position: relative;
+}
+.mainbody .articleList .article > .flex1 .articleTitle * {
+  color: #303030;
+}
+.mainbody .articleList .article > .flex1 .articleTitle label {
+  color: #999999;
+}
+.mainbody .articleList .article > .flex1 .articleTitle > p {
+  font-size: 18px;
+}
+.mainbody .articleList .article > .flex1 .articleInfo {
+  border-bottom: 1px solid #cecece;
+  padding: 15px 0 8px 0;
+}
+.mainbody .articleList .article > .flex1 .articleInfo a {
+  color: #0092ff;
+  margin: 0 5px;
+}
+.mainbody .articleList .article > .flex1 .articleInfo p:last-child {
+  font-size: 12px;
+  margin-top: 2px;
+  text-align: right;
+}
+.mainbody .articleList .article > .flex1 .articleInfo p:last-child .icon {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.mainbody .articleList .article > .flex1 .articleInfo p:last-child span {
+  margin-right: 25px;
+}
+.mainbody .articleList .article > .flex1 .articleInfo p:last-child span:last-child {
+  margin: 0;
+}
+.mainbody .articleList .article > .flex1 .articleText {
+  padding-top: 8px;
+  color: #303030;
+}
+.mainbody .articleList .article > .flex1 .articleText p {
+  line-height: 1.8;
+}
+.mainbody .articleList .article > .flex1 .option {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.mainbody .articleList .article > .flex1 .option button {
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  width: 84px;
+  height: 30px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.mainbody .articleList .article > .flex1 .option button label {
+  margin-left: 10px;
+}
+.mainbody .articleList .article > .flex1 .option button.ups {
+  color: #ff5951;
+}
+.mainbody .articleList .article > .flex1 .option button.ups label {
+  color: #303030;
+}
+.mainbody .articleList .article > .flex1 .option .flex1:last-child {
+  text-align: right;
+}
+.mainbody .articleList .article > .flex1 .option .flex1:last-child a {
+  color: #0092ff;
+  display: inline-block;
+}
+.mainbody .articleList .article > .flex1 .option .flex1:last-child a.button {
+  background: #ff5951;
+  color: #ffffff;
+  height: 30px;
+  line-height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.mainbody .hotAd {
+  width: 302px;
+  margin-left: 45px;
+}
+.mainbody .hotAd .advertisementName {
+  margin-bottom: 10px;
+}
+.mainbody .hotAd .advertisementName .icon {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+.mainbody .hotAd .hotAdTop a {
+  color: #ff5951;
+}
+.mainbody .hotAd > div {
+  margin-top: 40px;
+}
+.mainbody .hotAd > div:first-child {
+  margin-top: 0;
+}
+.mainbody .hotAd > div > div {
+  border: 1px solid #cccccc;
+}
+.mainbody .hotAd > div > div img {
+  width: 100%;
+}
+.mainbody .hotAd > div > div > p {
+  background: #f5f5f5;
+  height: 56px;
+  line-height: 56px;
+  padding: 0 13px;
+}
+.mainbody .hotAd > div > div > p .icon {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+.mainbody .hotAd > div > div > p span {
+  color: #999999;
+}
+.mainbody .hotAd > div ul {
+  background: #f5f5f5;
+}
+.mainbody .hotAd > div ul.hotAdUl {
+  padding: 0 20px;
+}
+.mainbody .hotAd > div ul.hotAdUl li {
+  padding: 15px 0;
+  border-bottom: 1px dashed #cccccc;
+}
+.mainbody .hotAd > div ul.hotAdUl li:last-child {
+  border: none;
+}
+.mainbody .hotAd > div ul.hotAdUl .articleTitle {
+  line-height: 1.8;
+}
+.mainbody .hotAd > div ul.hotAdUl .box {
+  margin-top: 15px;
+}
+.mainbody .hotAd > div ul.hotAdUl .box .flex1 {
+  color: #999999;
+}
+.mainbody .hotAd > div ul.hotAdUl .box .flex1 span {
+  color: #ff5951;
+  margin-left: 10px;
+}
+.mainbody .hotAd > div ul.hotAdUl .box .flex1:last-child {
+  text-align: right;
+}
+.mainbody > .box.mainWidth {
+  padding-top: 50px;
+}

@@ -1,0 +1,71 @@
+/**图标样式**/
+/**变量，包括颜色和字体**/
+/**字体大小**/
+.icon {
+  display: inline-block;
+}
+.icon-more {
+  width: 36px;
+  height: 16px;
+  background: url(../img/icon/icon_more.png) no-repeat 0 8px transparent;
+}
+.icon-user {
+  background: url("../img/icon/icon_account.png") no-repeat 50% 50% transparent;
+}
+.icon-lock {
+  background: url("../img/icon/icon_password.png") no-repeat 50% 50% transparent;
+}
+.icon-search {
+  background: url("../img/icon/icon_search.png") no-repeat 0 0 transparent;
+}
+.icon_checkbox {
+  background: url("../img/icon/icon_checkbox.png") no-repeat 0 0 transparent;
+}
+.icon_checked {
+  background: url("../img/icon/checked.png") no-repeat 0 0 transparent;
+}
+.icon_arrorRigth {
+  background: url("../img/icon/icon_right.png") no-repeat 0 0 transparent;
+}
+.icon_phone {
+  background: url("../img/icon/icon_call.png") no-repeat 0 0 transparent;
+}
+.icon_wx {
+  background: url("../img/icon/icon_wechat_small.png") no-repeat 0 0 transparent;
+}
+.icon_call {
+  background: url("../img/icon/icon_customer_call.png") no-repeat 0 0 transparent;
+}
+.icon_clock {
+  background: url("../img/icon/icon_clock.png") no-repeat 0 0 transparent;
+}
+.icon_comment {
+  background: url("../img/icon/icon_comment.png") no-repeat 0 0 transparent;
+}
+.icon_heat {
+  background: url("../img/icon/icon_category.png") no-repeat 0 0 transparent;
+}
+.icon_chkPhone {
+  background: url("../img/icon/icon_reset_phone.png") no-repeat 0 0 transparent;
+}
+.icon_pwd {
+  background: url("../img/icon/icon_reset_finger.png") no-repeat 0 0 transparent;
+}
+.icon_success {
+  background: url("../img/icon/icon_reset_key.png") no-repeat 0 0 transparent;
+}
+.active .icon_chkPhone {
+  background: url("../img/icon/icon_reset_phone_active.png") no-repeat 0 0 transparent;
+}
+.active .icon_pwd {
+  background: url("../img/icon/icon_reset_finger_usr.png") no-repeat 0 0 transparent;
+}
+.active .icon_success {
+  background: url("../img/icon/icon_reset_usr.png") no-repeat 0 0 transparent;
+}
+.icon_phone_input {
+  background: url("../img/icon/icon_phone.png") no-repeat 0 0 transparent;
+}
+.icon-register-lock {
+  background: url("../img/icon/icon_lock_gray.png") no-repeat 0 0 transparent;
+}

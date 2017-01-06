@@ -1,0 +1,116 @@
+@import "varible";
+.getPwd{
+  .mainbody{
+    background:url(../img/pic/mainbody_bg.png) no-repeat 0 0 transparent;
+    background-size:100% 100%;
+    .optsbar{
+      font-size:@font_larg;
+      padding:35px 0 6px 0;
+      a{
+        font-size: @font_base;
+      }
+    }
+    .getPwd_content{
+      background:#fff;
+      height:435px;
+    }
+  }
+  #register{
+    margin-top:50px;
+  }
+  .getPwd_content{
+    border:1px solid #f1f1f1;
+  }
+  .statusSet,.inputContent{
+    width:445px;
+    margin:0 auto;
+  }
+  .statusSet{
+    position: relative;
+    padding:30px 0 65px 0;
+    color:@color_font_black;
+    margin-bottom:60px;
+    >div.box{
+      position: absolute;
+      width:100%;
+      z-index:10;
+      >div:first-child,>div:last-child{
+        width:85px;
+      }
+    }
+    .icon{
+      width:52px;
+      height:52px;
+    }
+    .active{
+      color:@color_main;
+    }
+    .line{
+      border-bottom:1px solid @color_border_gray;
+      position: absolute;
+      bottom:38px;
+      left:16px;
+      right:16px;
+    }
+  }
+  .inputContent{
+    table{
+      width:100%;
+      td:last-child{
+        position: relative;
+      }
+      td>.icon{
+        width:14px;
+        height:23px;
+        position: absolute;
+        right:60px;
+        top:23px;
+      }
+      td>.icon-register-lock{
+        width:18px;
+      }
+      p>.icon{
+        width:17px;
+        height:17px;
+        vertical-align: middle;
+        margin-top:-3px;
+        margin-right:12px;
+      }
+    }
+    input[type='text'],input[type='password']{
+      height:44px;
+      border:1px solid #ddd;
+      text-indent:12px;
+    }
+    input,p{
+      margin-top:10px;
+      margin-bottom:10px;
+      margin-left:15px;
+    }
+    p{
+      margin-top:0;
+    }
+    .button{
+      display:inline-block;
+      width:109px;
+      height:46px;
+      margin:10px 0 10px 8px;
+      vertical-align: middle;
+      line-height:46px;
+    }
+    #phoneNumber,#pwd{
+      width:292px;
+    }
+    #identifyCode{
+      width:174px;
+    }
+    .nextStep{
+      border:none;
+      width:292px;
+      height:48px;
+      line-height:48px;
+      font-size:@font_largest;
+      border-radius:5px;
+    }
+  }
+}

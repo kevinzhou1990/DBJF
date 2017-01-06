@@ -1,0 +1,23 @@
+/**固定宽度，居中**/
+.mainWidth {
+  width: 1170px;
+  margin: 0 auto;
+  position: relative;
+}
+.header {
+  background: #fff;
+}
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}
+.clearBoth:after {
+  display: block;
+  content: ".";
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  clear: both;
+}

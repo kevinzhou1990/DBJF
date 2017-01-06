@@ -1,0 +1,223 @@
+/**
+* 首页样式表
+*/
+@import "varible";
+.mainbody{
+  .advertisement{
+    ul{
+      img{
+        width:100%;
+      }
+    }
+    #slider{
+      max-height:560px;
+    }
+    .imgAd{
+      padding:70px 0;
+      background:@color_header_opts;
+      a.center{
+        margin:0 36px;
+      }
+      img{
+        border:1px solid @color_border_dark;
+      }
+    }
+  }
+  .articleList{
+    li{
+      padding:30px 0;
+      border-bottom:1px dashed @color_border_gray;
+      &:first-child{
+        padding-top:0;
+      }
+    }
+    .article{
+      >a{
+        display:block;
+        width:300px;
+        height:200px;
+        overflow: hidden;
+        padding-left:3px;
+        position: relative;
+        span{
+          position: absolute;
+          display: block;
+          width:67px;
+          height:30px;
+          line-height:30px;
+          font-size:@font-small;
+          background:url("../img/icon/icon_start.png") 0 0 transparent;
+          top:30px;
+          left:-2px;
+          color:@color_font_fff;
+          text-indent:5px;
+          box-shadow: -3px 3px 2px @color_font_black;
+        }
+        span.onTime{
+          background:url("../img/icon/icon_prosessing.png") 0 0 transparent;
+        }
+      }
+      >.flex1{
+        margin-left:12px;
+        position: relative;
+        .articleTitle{
+          *{
+            color:@color_font_base;
+          }
+          label{
+            color:@color_font_grays;
+          }
+          >p{
+            font-size:@font_largest;
+          }
+        }
+        .articleInfo{
+          border-bottom:1px solid @color_border_gray1;
+          padding:15px 0 8px 0;
+          a{
+            color:@color_link_active;
+            margin:0 5px;
+          }
+          p:last-child{
+            font-size:@font-small;
+            margin-top:2px;
+            text-align:right;
+            .icon{
+              width:15px;
+              height:15px;
+              vertical-align: middle;
+              margin-right:5px;
+            }
+            span{
+              margin-right:25px;
+              &:last-child{
+                margin:0;
+              }
+            }
+          }
+        }
+        .articleText{
+          padding-top:8px;
+          color:@color_font_base;
+          p{
+            line-height:1.8;
+          }
+        }
+        .option{
+          width:100%;
+          position: absolute;
+          bottom:0;
+          button{
+            border:1px solid @color_border_gray1;
+            border-radius:5px;
+            width:84px;
+            height:30px;
+            background:@color_font_fff;
+            cursor:pointer;
+            label{
+              margin-left:10px;
+            }
+          }
+          button.ups{
+            color: @color_main;
+            label{
+              color:@color_font_base
+            }
+          }
+          .flex1:last-child{
+            text-align: right;
+            a{
+              color:@color_link_active;
+              display: inline-block;
+            }
+            a.button{
+              background:@color_main;
+              color:@color_font_fff;
+              height: 30px;
+              line-height:30px;
+              width:100px;
+              border-radius:5px;
+              margin-left:10px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .hotAd{
+    width:302px;
+    margin-left:45px;
+    .advertisementName{
+      margin-bottom:10px;
+      .icon{
+        width:10px;
+        height:16px;
+        margin-right:10px;
+      }
+    }
+    .hotAdTop{
+      a{
+        color: @color_main;
+      }
+    }
+    >div{
+      margin-top:40px;
+      &:first-child{
+        margin-top:0;
+      }
+      >div{
+        border:1px solid @color_border_gray;
+        img{
+          width:100%;
+        }
+        >p{
+          background:@color_header_opts;
+          height:56px;
+          line-height:56px;
+          padding:0 13px;
+          .icon{
+            width:15px;
+            height:15px;
+            vertical-align: middle;
+          }
+          span{
+            color:@color_font_grays;
+          }
+        }
+      }
+      ul{
+        background:@color_header_opts;
+      }
+      ul.hotAdUl{
+        padding:0 20px;
+        li{
+          padding:15px 0;
+          border-bottom:1px dashed @color_border_gray;
+          &:last-child{
+            border:none;
+          }
+        }
+        .articleTitle{
+          line-height:1.8;
+        }
+        .box{
+          margin-top:15px;
+          .flex1{
+            color:@color_font_grays;
+            span{
+              color:@color_main;
+              margin-left:10px;
+            }
+            &:last-child{
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
+  >.box.mainWidth{
+    padding-top:50px;
+  }
+}
