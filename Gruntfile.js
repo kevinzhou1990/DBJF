@@ -28,7 +28,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'img',
           src: ['**/*.{png,jpg,jpeg}'], // 优化 img 目录下所有 png/jpg/jpeg 图片
-          dest: 'build/img' // 优化后的图片保存位置
+          dest: 'dist/img' // 优化后的图片保存位置
         }]
       }
     },
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'css/',
           src: ['my-app.css', 'common.css'],
-          dest: 'build/css',
+          dest: 'dist/css',
           ext: '.css'
         }]
       }
