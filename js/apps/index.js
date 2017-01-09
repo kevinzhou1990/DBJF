@@ -3,7 +3,7 @@
  */
 require(['config'],function(config){
   require.config(config);
-  require(['jquery','zh_tips','tool','template7'],function($,LanguageZh,tool,Template7){
+  require(['jquery','zh_tips','tool'],function($,LanguageZh,tool){
     tool.interceptAjax();
     var indexPage = {
       init:function(){
@@ -21,16 +21,12 @@ require(['config'],function(config){
           dataType:'json',
           success:function(data){
             if(!data.ret){
-              that.setTpl('rightAdList',data);
+              tool.setTemplateData('rightAdList',data,'adContent');
             }
           }
         });
       },
-      getIndexArticleList:function(){},
-      setTpl:function(strTplName,data){
-        var strTpl = $('#'+strTplName).html();
-        console.log(strTplName);
-      }
+      getIndexArticleList:function(){}
     };
     indexPage.init();
   });

@@ -1,7 +1,7 @@
 /**
  * Created by ZhouYun on 2016/12/9.
  */
-define(['jquery','mock'],function($,Mock){
+define(['jquery','mock','template7'],function($,Mock,Template7){
   var Tool = {
     /**
      * 模拟请求，拦截ajax，转发给相应方法，返回JSON数据
@@ -87,6 +87,20 @@ define(['jquery','mock'],function($,Mock){
         }
         sends == 0 ? clearTimeout(timer) : that.countDown(sends, callback);
       }, 1000);
+    },
+    /**
+     * 工具函数：设置模板数据，解析并填充数据
+     * 参数：strTplName，模板所在script标签id；data,要解析的数据，为json对象；target，填充目标id
+     * ***/
+    setTemplateData:function(strTplName,data,target){
+      var strTpl = $('#'+strTplName).html();
+      var cTpl = Template7.compile(strTpl);
+      var html = cTpl(data);
+      if(data.ret == 0){
+        data.page ? $('#'+target).append(html) : $('#'+ target).html(html);
+      }
+      // console.log(JSON.stringify(data));
+
     }
   };
   return Tool;
