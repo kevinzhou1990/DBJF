@@ -59,6 +59,78 @@ a {
   color: #ffffff;
   background: #ff5951;
 }
+/**轮播区域**/
+.slider {
+  position: relative;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+.slider-nav ol {
+  list-style: none;
+  text-align: center;
+}
+.slider-nav ol li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 5px;
+  overflow: hidden;
+  text-indent: -999em;
+  cursor: pointer;
+}
+.slider-nav ol li.unslider-active {
+  cursor: default;
+}
+.slider-wrap {
+  position: relative;
+}
+.slider-wrap.unslider-carousel > li {
+  float: left;
+}
+.slider-vertical > ul {
+  height: 100%;
+}
+.slider-vertical li {
+  float: none;
+  width: 100%;
+}
+.slider-fade {
+  position: relative;
+}
+.slider-fade .unslider-wrap li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 8;
+}
+.slider-fade .unslider-wrap li.unslider-active {
+  z-index: 10;
+}
+.slider ul,
+.slider ol,
+.slider li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.slider-arrow {
+  position: absolute;
+  left: 20px;
+  z-index: 2;
+  cursor: pointer;
+}
+.slider-arrow.next {
+  left: auto;
+  right: 20px;
+}
+.slider li {
+  float: left;
+}
 .header {
   background: #fff;
 }

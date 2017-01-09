@@ -45,6 +45,80 @@ a{
   color:@color_font_fff;
   background: @color_main;
 }
+/**轮播区域**/
+.slider{
+  position: relative;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  &-nav {
+    ol {
+      list-style: none;
+      text-align: center;
+      li {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 4px;
+        background: transparent;
+        border-radius: 5px;
+        overflow: hidden;
+        text-indent: -999em;
+        cursor: pointer;
+        &.unslider-active {
+          cursor: default;
+        }
+      }
+    }
+  }
+  &-wrap {
+    position: relative;
+    &.unslider-carousel > li {
+      float: left;
+    }
+  }
+  &-vertical {
+    > ul {
+      height: 100%;
+    }
+    li {
+      float: none;
+      width: 100%;
+    }
+  }
+  &-fade {
+    position: relative;
+    .unslider-wrap li {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: 8;
+      &.unslider-active {
+        z-index: 10;
+      }
+    }
+  }
+  ul, ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  &-arrow {
+    position: absolute;
+    left: 20px;
+    z-index: 2;
+    cursor: pointer;
+    &.next {
+      left: auto;
+      right: 20px;
+    }
+  }
+  li{
+    float: left;
+  }
+}
 .header{
   background:#fff;
   >.opts{

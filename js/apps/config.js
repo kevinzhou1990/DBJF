@@ -12,15 +12,16 @@ define([],function(){
       'mock':'plugin/mock',
       'sha1':'plugin/sha1',
       'template7':'plugin/template7',
+      'slider':'plugin/unslider',
       'tool':'module/tool',
       'zh_tips':'module/zh_tips',
-      'text':'module/text',
-      'rightAdListTpl':'../template/rightAdList.tpl'
+      'text':'module/text'
     },
     shim:{
       'jquery':{
         'exports':'$'
       },
+      'slider':['jquery'],
       'sha1':['jquery'],
       'template7':{
         'exports':'Template7'

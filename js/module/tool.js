@@ -61,7 +61,14 @@ define(['jquery','mock','template7'],function($,Mock,Template7){
           }
           return jsonData;
         case '/index/info':
-          var ret = 0,banner=[{imageUrl:'../img/pic/banner.png',linkUrl:'http://www.baidu.com'},{imageUrl:'../img/pic/banner.png',linkUrl:'http://www.12306.cn'}],hotArticles = [{aid: 1,mainImageUrl: "img/pic/index_hot1.jpg",targetUrl: "http://www.baidu.com",commentCount: 24}],goodArticles=[{aid:1,title:'这里是活动标题的内容',mainImageUrl:'img/pic/index_hot1.jpg',goodData:432,commentCount:24},{aid:1,title:'这里是活动标题的内容这里是活动标题的内容',mainImageUrl:'img/pic/index_hot1.jpg',goodData:432,commentCount:24},{aid:1,title:'这里是活动标题的内容',mainImageUrl:'img/pic/index_hot1.jpg',goodData:432,commentCount:24},{aid:1,title:'这里是活动标题的内容这里是活动标题的内容',mainImageUrl:'img/pic/index_hot1.jpg',goodData:432,commentCount:24}],hotArticles = [{"aid": 1,"mainImageUrl": "http://图片url","targetUrl": "http://www.w3cfuns.com","commentCount": 24}];
+          var ret = 0,
+              banner=[{imageUrl:'../img/pic/banner.png',linkUrl:'http://www.baidu.com'},
+                      {imageUrl:'../img/pic/banner.png',linkUrl:'http://www.12306.cn'}],
+              hotArticles = [{aid: 1,mainImageUrl: "img/pic/index_hot2.jpg",targetUrl: "http://www.baidu.com",commentCount: 24}],
+              goodArticles=[{aid:1,title:'这里是活动标题的内容',mainImageUrl:'img/pic/index_hot2.jpg',goodData:432,commentCount:24},
+                  {aid:1,title:'这里是活动标题的内容这里是活动标题的内容',mainImageUrl:'img/pic/index_hot1.jpg',goodData:432,commentCount:24},
+                  {aid:1,title:'这里是活动标题的内容',mainImageUrl:'img/pic/index_hot1.jpg',goodData:432,commentCount:24},
+                  {aid:1,title:'这里是活动标题的内容这里是活动标题的内容',mainImageUrl:'img/pic/index_hot1.jpg',goodData:432,commentCount:24}];
           jsonData.ret = 0;
           jsonData.banner = banner;
           jsonData.goodArticles = goodArticles;
@@ -96,6 +103,7 @@ define(['jquery','mock','template7'],function($,Mock,Template7){
       var strTpl = $('#'+strTplName).html();
       var cTpl = Template7.compile(strTpl);
       var html = cTpl(data);
+      console.log(data);
       if(data.ret == 0){
         data.page ? $('#'+target).append(html) : $('#'+ target).html(html);
       }

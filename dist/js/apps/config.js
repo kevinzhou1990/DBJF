@@ -1,2 +1,2 @@
 /*! spakey1.0 updated in 2017-01-09 */
-define([],function(){return{baseUrl:"/js",text:{env:"rhino"},paths:{jquery:"plugin/jquery",mock:"plugin/mock",sha1:"plugin/sha1",template7:"plugin/template7",tool:"module/tool",zh_tips:"module/zh_tips",text:"module/text",rightAdListTpl:"../template/rightAdList.tpl"},shim:{jquery:{exports:"$"},sha1:["jquery"],template7:{exports:"Template7"}}}});
+define([],function(){return{baseUrl:"/js",text:{env:"rhino"},paths:{jquery:"plugin/jquery",mock:"plugin/mock",sha1:"plugin/sha1",template7:"plugin/template7",tool:"module/tool",zh_tips:"module/zh_tips",text:"module/text"},shim:{jquery:{exports:"$"},sha1:["jquery"],template7:{exports:"Template7"}}}});
