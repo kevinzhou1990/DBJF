@@ -2,6 +2,57 @@
  * Created by ZhouYun on 2016/12/9.
  */
 define(['jquery','mock','template7'],function($,Mock,Template7){
+  //给Template7添加判断工具
+  Template7.registerHelper('rif',function(v1,opt,v2,temp){
+    switch (opt){
+        case '==':
+          return (v1 == v2) ? temp.fn(this) : temp.inverse(this);
+          break;
+        case '===':
+          return (v1 === v2) ? temp.fn(this) : temp.inverse(this);
+          break;
+        case '>':
+          return (v1 > v2) ? temp.fn(this) : temp.inverse(this);
+          break;
+        case '<':
+          return (v1 < v2) ? temp.fn(this) : temp.inverse(this);
+          break;
+        case '>=':
+          return (v1 >= v2) ? temp.fn(this) : temp.inverse(this);
+          break;
+        case '<=':
+          return (v1 <= v2) ? temp.fn(this) : temp.inverse(this);
+          break;
+        case '&&':
+          return (v1 && v2) ? temp.fn(this) : temp.inverse(this);
+          break;
+        case '||':
+          return (v1 || v2) ? temp.fn(this) : temp.inverse(this);
+          break;
+        case '!=':
+          return (v1 != v2) ? temp.fn(this) : temp.inverse(this);
+          break;
+        default:
+          return temp.inverse(this);
+          break;
+    }
+  });
+  //日期格式化函数
+  Date.prototype.Format = function (fmt) {
+      var o = {
+          "M+": this.getMonth() + 1, //月份
+          "d+": this.getDate(), //日
+          "h+": this.getHours(), //小时
+          "m+": this.getMinutes(), //分
+          "s+": this.getSeconds(), //秒
+          "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+          "S": this.getMilliseconds() //毫秒
+      };
+      if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+      for (var k in o)
+          if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+      return fmt;
+  }
   var Tool = {
     /**
      * 模拟请求，拦截ajax，转发给相应方法，返回JSON数据
@@ -74,6 +125,187 @@ define(['jquery','mock','template7'],function($,Mock,Template7){
           jsonData.goodArticles = goodArticles;
           jsonData.hotArticles = hotArticles;
           return jsonData;
+          break;
+          case '/index/list':
+          var ret = 0,page = 1,data = [
+             {
+               aid:1,
+               platform:'平台名称',
+               title:'标题内容文字示意标题内容文字示意标题内容文字',
+               summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+               mainImageUrl:'img/pic/article1.jpg',
+               targetUrl:'',
+               createTime:1471651200000,
+               activityBeginTime:1485734400000,
+               activityEndTime:1485734400000,
+               tags:'标签1^标签2^标签3',
+               uid:1000432,
+               nick:'小小叮当',
+               readCount:123,
+               commentCount:100,
+               goodCount:66,
+               badCount:12
+             },{
+                  aid:2,
+                  platform:'平台名称',
+                  title:'标题内容文字示意标题内容文字示意标题内容文字',
+                  summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+                  mainImageUrl:'img/pic/article6.jpg',
+                  targetUrl:'',
+                  createTime:1471651200000,
+                  activityBeginTime:1483920000000,
+                  activityEndTime:1485734400000,
+                  tags:'标签1^标签2^标签3',
+                  uid:1000432,
+                  nick:'小小叮当',
+                  readCount:123,
+                  commentCount:100,
+                  goodCount:66,
+                  badCount:12
+              },{
+                  aid:1,
+                  platform:'平台名称',
+                  title:'标题内容文字示意标题内容文字示意标题内容文字',
+                  summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+                  mainImageUrl:'img/pic/article3.jpg',
+                  targetUrl:'',
+                  createTime:1471651200000,
+                  activityBeginTime:1483920000000,
+                  activityEndTime:1485734400000,
+                  tags:'标签1^标签2^标签3',
+                  uid:1000432,
+                  nick:'小小叮当',
+                  readCount:123,
+                  commentCount:100,
+                  goodCount:66,
+                  badCount:12
+              },{
+                  aid:1,
+                  platform:'平台名称',
+                  title:'标题内容文字示意标题内容文字示意标题内容文字',
+                  summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+                  mainImageUrl:'img/pic/article2.jpg',
+                  targetUrl:'',
+                  createTime:1471651200000,
+                  activityBeginTime:1483920000000,
+                  activityEndTime:1485734400000,
+                  tags:'标签1^标签2^标签3',
+                  uid:1000432,
+                  nick:'小小叮当',
+                  readCount:123,
+                  commentCount:100,
+                  goodCount:66,
+                  badCount:12
+              },{
+                  aid:1,
+                  platform:'平台名称',
+                  title:'标题内容文字示意标题内容文字示意标题内容文字',
+                  summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+                  mainImageUrl:'img/pic/article5.jpg',
+                  targetUrl:'',
+                  createTime:1471651200000,
+                  activityBeginTime:1483920000000,
+                  activityEndTime:1485734400000,
+                  tags:'标签1^标签2^标签3',
+                  uid:1000432,
+                  nick:'小小叮当',
+                  readCount:123,
+                  commentCount:100,
+                  goodCount:66,
+                  badCount:12
+              },{
+                  aid:1,
+                  platform:'平台名称',
+                  title:'标题内容文字示意标题内容文字示意标题内容文字',
+                  summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+                  mainImageUrl:'img/pic/article4.jpg',
+                  targetUrl:'',
+                  createTime:1471651200000,
+                  activityBeginTime:1471651200000,
+                  activityEndTime:1471651200000,
+                  tags:'标签1^标签2^标签3',
+                  uid:1000432,
+                  nick:'小小叮当',
+                  readCount:123,
+                  commentCount:100,
+                  goodCount:66,
+                  badCount:12
+              },
+              {
+                  aid:1,
+                  platform:'平台名称',
+                  title:'标题内容文字示意标题内容文字示意标题内容文字',
+                  summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+                  mainImageUrl:'img/pic/article7.jpg',
+                  targetUrl:'',
+                  createTime:1471651200000,
+                  activityBeginTime:1477044130,
+                  activityEndTime:1477044130,
+                  tags:'标签1^标签2^标签3',
+                  uid:1000432,
+                  nick:'小小叮当',
+                  readCount:123,
+                  commentCount:100,
+                  goodCount:66,
+                  badCount:12
+              },{
+                  aid:1,
+                  platform:'平台名称',
+                  title:'标题内容文字示意标题内容文字示意标题内容文字',
+                  summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+                  mainImageUrl:'img/pic/article4.jpg',
+                  targetUrl:'',
+                  createTime:1471651200000,
+                  activityBeginTime:1484870400000,
+                  activityEndTime:1485734400000,
+                  tags:'标签1^标签2^标签3',
+                  uid:1000432,
+                  nick:'小小叮当',
+                  readCount:123,
+                  commentCount:100,
+                  goodCount:66,
+                  badCount:12
+              },{
+                  aid:1,
+                  platform:'平台名称',
+                  title:'标题内容文字示意标题内容文字示意标题内容文字',
+                  summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+                  mainImageUrl:'img/pic/article3.jpg',
+                  targetUrl:'',
+                  createTime:1471651200000,
+                  activityBeginTime:1484870400000,
+                  activityEndTime:1485734400000,
+                  tags:'标签1^标签2^标签3',
+                  uid:1000432,
+                  nick:'小小叮当',
+                  readCount:123,
+                  commentCount:100,
+                  goodCount:66,
+                  badCount:12
+              },{
+                  aid:1,
+                  platform:'平台名称',
+                  title:'标题内容文字示意标题内容文字示意标题内容文字',
+                  summary:'爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容',
+                  mainImageUrl:'img/pic/article6.jpg',
+                  targetUrl:'',
+                  createTime:1471651200000,
+                  activityBeginTime:1484870400000,
+                  activityEndTime:1485734400000,
+                  tags:'标签1^标签2^标签3',
+                  uid:1000432,
+                  nick:'小小叮当',
+                  readCount:123,
+                  commentCount:100,
+                  goodCount:66,
+                  badCount:12
+              }
+          ];
+          jsonData.ret = ret;
+          jsonData.page = page;
+          jsonData.data = data;
+          return jsonData;
+          break;
         default:
           break;
       }
@@ -90,7 +322,6 @@ define(['jquery','mock','template7'],function($,Mock,Template7){
         if (typeof callback == 'function') {
           tims = sends % 60;
           callback(tims);
-          // console.log(tims);
         }
         sends == 0 ? clearTimeout(timer) : that.countDown(sends, callback);
       }, 1000);
@@ -103,12 +334,9 @@ define(['jquery','mock','template7'],function($,Mock,Template7){
       var strTpl = $('#'+strTplName).html();
       var cTpl = Template7.compile(strTpl);
       var html = cTpl(data);
-      console.log(data);
       if(data.ret == 0){
         data.page ? $('#'+target).append(html) : $('#'+ target).html(html);
       }
-      // console.log(JSON.stringify(data));
-
     }
   };
   return Tool;

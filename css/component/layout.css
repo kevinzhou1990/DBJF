@@ -67,22 +67,25 @@ a {
   padding: 0;
 }
 .slider-nav ol {
-  list-style: none;
-  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
 }
 .slider-nav ol li {
   display: inline-block;
   width: 6px;
   height: 6px;
   margin: 0 4px;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.6);
   border-radius: 5px;
   overflow: hidden;
   text-indent: -999em;
   cursor: pointer;
 }
-.slider-nav ol li.unslider-active {
+.slider-nav ol li.slider-active {
+  width: 10px;
   cursor: default;
+  background: #ffffff;
 }
 .slider-wrap {
   position: relative;

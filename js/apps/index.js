@@ -20,7 +20,7 @@ require(['config'],function(config){
           },
           dataType:'json',
           success:function(data){
-            if(!data.ret){
+            if(data.ret == 0){
               var goodArticles = {
                 arrImg:[],
                 arrArticles:[]
@@ -33,14 +33,45 @@ require(['config'],function(config){
               });
               data.goodArticles = goodArticles;
               tool.setTemplateData('rightAdList',data,'adContent');
+              tool.setTemplateData('bannerTpl',data,'banner');
               $('.slider').unslider({
-                autoplay:true,arrows:{prev:'',next:''}
+                autoplay:true,arrows:false
               });
             }
           }
         });
       },
-      getIndexArticleList:function(){}
+      getIndexArticleList:function(page){
+        var that = this;
+        if(!page){
+          page = 1;
+        }
+        $.ajax({
+          url:'/index/list',
+          type:'post',
+          data:{
+            page:page
+          },
+          dataType:'json',
+          success : function(data){
+            if(data.ret == 0){
+              var nowTime = new Date().getTime();
+              $.each(data.data,function(index,item){
+                var startTime = new Date(item.activityBeginTime),endTime = new Date(item.activityEndTime),createTime = new Date(item.createTime);
+                //处理时间
+                if(item.activityBeginTime > nowTime){
+
+                }else{
+
+                }
+                item.activityBeginTime = startTime.Format('yyyy-MM-dd');
+                item.createTime = createTime.Format('yyyy-MM-dd');
+              });
+              tool.setTemplateData('indexArticle',data,'articleListContent')
+            }
+          }
+        });
+      }
     };
     indexPage.init();
   });
