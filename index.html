@@ -66,15 +66,15 @@
   <ul class="articleList">
     {{#each data}}
     <li class="box article">
-      <a href="#"><img src="{{this.mainImageUrl}}" alt=""><span class="onTime">即将开始</span></a>
+      <a href="#"><img src="{{this.mainImageUrl}}" alt="">{{#if this.startFlag}}<span class="onTime">进行中</span></a>{{else}}<span>即将开始</span></a>{{/if}}
       <div class="flex1">
         <div class="articleTitle">
           <p><a href="#">【{{this.platform}}】{{this.title}}</a></p>
           <div class="articleInfo box">
-            <p class="flex1"><label>标签：</label><a href="#">P2P理财活动</a><a href="#">促销活动</a></p>
+            <p class="flex1"><label>标签：</label>{{#each this.tags}}<a href="#">{{this}}</a>{{/each}}</p>
             <p class="flex1">
               <i class="icon icon_clock"></i><span>{{this.createTime}}</span>
-              <i class="icon icon_comment"></i><span>3600</span>
+              <i class="icon icon_comment"></i><span>{{this.commentCount}}</span>
             </p>
           </div>
         </div>
@@ -82,11 +82,11 @@
           <p>爆简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容简析示意文字爆料内容</p>
           <div class="box option">
             <div class="flex1">
-              <button class="ups">靠谱<label>6</label></button>
-              <button>不靠谱<label>4</label></button>
+              <button class="ups">靠谱<label>{{this.goodCount}}</label></button>
+              <button>不靠谱<label>{{this.badCount}}</label></button>
             </div>
             <div class="flex1">
-              <a href="#">小小叮当</a><a href="#" class="button align-center">直达链接</a>
+              <a href="#">小小叮当</a><a href="{{this.targetUrl}}" class="button align-center">直达链接</a>
             </div>
           </div>
         </div>

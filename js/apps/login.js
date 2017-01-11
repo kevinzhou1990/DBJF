@@ -29,7 +29,7 @@ require(['config'],function(config){
       var userInfo = loginCheck();
       if(userInfo){
         $.ajax({
-          url:'/user/login',
+          url:'/api/user/login',
           type:'get',
           data:userInfo,
           dataType:'json',
@@ -57,7 +57,7 @@ require(['config'],function(config){
       if(tool.chkPhone(phoneNumber)){
         $(this).removeClass('error');
         $.ajax({
-          url:'/user/sendCode',
+          url:'/api/user/sendCode',
           type:'get',
           data:{
             account:phoneNumber

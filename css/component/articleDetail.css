@@ -1,0 +1,6 @@
+/**文章详情页样式表**/
+/**变量，包括颜色和字体**/
+/**字体大小**/
+.articleDetail .header {
+  border-bottom: 2px solid #999999;
+}

@@ -13,7 +13,7 @@ require(['config'],function(config){
       getIndexInfo:function(){
         var that = this;
         $.ajax({
-          url:'/index/info',
+          url:'/api/index/info',
           type:'post',
           data: {
             token: localStorage._mtoken ? localStorage._mtoken : ''
@@ -47,7 +47,7 @@ require(['config'],function(config){
           page = 1;
         }
         $.ajax({
-          url:'/index/list',
+          url:'/api/index/list',
           type:'post',
           data:{
             page:page
@@ -57,13 +57,17 @@ require(['config'],function(config){
             if(data.ret == 0){
               var nowTime = new Date().getTime();
               $.each(data.data,function(index,item){
-                var startTime = new Date(item.activityBeginTime),endTime = new Date(item.activityEndTime),createTime = new Date(item.createTime);
+                var startTime = new Date(item.activityBeginTime),
+                    endTime = new Date(item.activityEndTime),
+                    createTime = new Date(item.createTime),
+                    tags = item.tags.split('^');
                 //处理时间
                 if(item.activityBeginTime > nowTime){
-
+                  item.startFlag = false;
                 }else{
-
+                  item.startFlag = true;
                 }
+                item.tags = tags;
                 item.activityBeginTime = startTime.Format('yyyy-MM-dd');
                 item.createTime = createTime.Format('yyyy-MM-dd');
               });

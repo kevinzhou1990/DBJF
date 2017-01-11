@@ -257,6 +257,78 @@ a{
 .mainbody{
   min-height:570px;
   background-size:100% 100%;
+  .hotAd{
+    width:302px;
+    margin-left:45px;
+    .advertisementName{
+      margin-bottom:10px;
+      .icon{
+        width:10px;
+        height:16px;
+        margin-right:10px;
+      }
+    }
+    .hotAdTop{
+      a{
+        color: @color_main;
+      }
+    }
+    >div{
+      margin-top:40px;
+      &:first-child{
+        margin-top:0;
+      }
+      >div{
+        border:1px solid @color_border_gray;
+        img{
+          width:100%;
+        }
+        >p{
+          background:@color_header_opts;
+          height:56px;
+          line-height:56px;
+          padding:0 13px;
+          .icon{
+            width:16px;
+            height:16px;
+            vertical-align: middle;
+          }
+          span{
+            color:@color_font_grays;
+          }
+        }
+      }
+      ul{
+        background:@color_header_opts;
+      }
+      ul.hotAdUl{
+        padding:0 20px;
+        li{
+          padding:15px 0;
+          border-bottom:1px dashed @color_border_gray;
+          &:last-child{
+            border:none;
+          }
+        }
+        .articleTitle{
+          line-height:1.8;
+        }
+        .box{
+          margin-top:15px;
+          .flex1{
+            color:@color_font_grays;
+            span{
+              color:@color_main;
+              margin-left:10px;
+            }
+            &:last-child{
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }
   .adContent{
     width:790px;
     height:384px;
