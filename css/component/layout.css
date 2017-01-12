@@ -583,3 +583,18 @@ input.error::-moz-placeholder {
 .mainFooter * {
   color: #ffffff;
 }
+/**面包屑导航**/
+.rumb {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #999999;
+  margin-bottom: 30px;
+}
+.rumb a {
+  margin: 0 5px;
+}
+.rumb a:first-child {
+  margin-left: 0;
+}
+.rumb a:hover {
+  text-decoration: underline;
+}

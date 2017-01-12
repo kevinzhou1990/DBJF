@@ -4,4 +4,58 @@
   .header{
     border-bottom:2px solid @color_font_grays;
   }
+  .mainImg{
+    margin-right:20px;
+    position: relative;
+    img{
+      width:100%;
+    }
+    span{
+      position: absolute;
+      display: block;
+      width:67px;
+      height:30px;
+      line-height:30px;
+      font-size:@font-small;
+      background:url("../img/icon/icon_start.png") 0 0 transparent;
+      color:@color_font_fff;
+      text-indent:5px;
+      box-shadow: -3px 3px 2px @color_font_black;
+      top:25px;
+      left:-2px;
+    }
+    span.onTime{
+      background:url("../img/icon/icon_prosessing.png");
+    }
+  }
+  .baseInfo{
+    position: relative;
+    .title{
+      font-size: @font_largest;
+      color:@color_font_base;
+      margin-bottom:35px;
+    }
+    .articleEle{
+      p{
+        color:@color_lightGray;
+        line-height:1.8;
+        a{
+          color:@color_link_active;
+          margin:0 5px;
+        }
+      }
+    }
+    .button{
+      display: inline-block;
+      width:160px;
+      height:55px;
+      line-height:55px;
+      font-size:@font_largest;
+      color:@color_font_fff;
+      border-radius:5px;
+      background: @color_main;
+      position: absolute;
+      bottom:0;
+    }
+  }
 }

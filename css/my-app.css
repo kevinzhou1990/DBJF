@@ -4,6 +4,58 @@
 .articleDetail .header {
   border-bottom: 2px solid #999999;
 }
+.articleDetail .mainImg {
+  margin-right: 20px;
+  position: relative;
+}
+.articleDetail .mainImg img {
+  width: 100%;
+}
+.articleDetail .mainImg span {
+  position: absolute;
+  display: block;
+  width: 67px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  background: url("../img/icon/icon_start.png") 0 0 transparent;
+  color: #ffffff;
+  text-indent: 5px;
+  box-shadow: -3px 3px 2px #666666;
+  top: 25px;
+  left: -2px;
+}
+.articleDetail .mainImg span.onTime {
+  background: url("../img/icon/icon_prosessing.png");
+}
+.articleDetail .baseInfo {
+  position: relative;
+}
+.articleDetail .baseInfo .title {
+  font-size: 18px;
+  color: #303030;
+  margin-bottom: 35px;
+}
+.articleDetail .baseInfo .articleEle p {
+  color: #9a9a9a;
+  line-height: 1.8;
+}
+.articleDetail .baseInfo .articleEle p a {
+  color: #0092ff;
+  margin: 0 5px;
+}
+.articleDetail .baseInfo .button {
+  display: inline-block;
+  width: 160px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 18px;
+  color: #ffffff;
+  border-radius: 5px;
+  background: #ff5951;
+  position: absolute;
+  bottom: 0;
+}
 
 /**变量，包括颜色和字体**/
 /**字体大小**/
@@ -923,6 +975,21 @@ input.error::-moz-placeholder {
 }
 .mainFooter * {
   color: #ffffff;
+}
+/**面包屑导航**/
+.rumb {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #999999;
+  margin-bottom: 30px;
+}
+.rumb a {
+  margin: 0 5px;
+}
+.rumb a:first-child {
+  margin-left: 0;
+}
+.rumb a:hover {
+  text-decoration: underline;
 }
 
 

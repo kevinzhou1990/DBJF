@@ -3,7 +3,7 @@
  */
 require(['config'],function(config){
     require.config(config);
-    require(['jquery','zh_tips','tool','slider'],function($,LanguageZh,tool){
+    require(['jquery','zh_tips','tool','slider','pagenation'],function($,LanguageZh,tool){
         tool.interceptAjax();
         tool.getAdInfo();
     });

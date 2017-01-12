@@ -13,6 +13,7 @@ define([],function(){
       'sha1':'plugin/sha1',
       'template7':'plugin/template7',
       'slider':'plugin/unslider',
+      'pagenation':'plugin/jquery.pagination.min',
       'tool':'module/tool',
       'zh_tips':'module/zh_tips',
       'text':'module/text'
@@ -23,6 +24,7 @@ define([],function(){
       },
       'slider':['jquery'],
       'sha1':['jquery'],
+      'pagenation':['jquery'],
       'template7':{
         'exports':'Template7'
       }
